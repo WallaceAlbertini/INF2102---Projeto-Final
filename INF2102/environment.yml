@@ -1,0 +1,16 @@
+name: para_testar
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12.4
+  - python-dateutil
+  - openpyxl
+  - pip
+  - pip:
+      - langchain
+      - langchain-openai
+      - sentence-transformers
+      - chromadb
+      - pandas
+      - streamlit
