@@ -5,15 +5,15 @@ class View:
         self.controller = controller
 
     def run(self):
-        st.markdown("## Modelo TSC - Teoria Social Cognitiva")
+        st.markdown("## Classificador TSC - Teoria Social Cognitiva")
         
         # Entrada do usuário
-        user_input = st.text_area("Digite sua questão aqui:", placeholder="Escreva sua questão...")
+        user_input = st.text_area("Digite o trecho a ser classificado:", placeholder="Escreva seu trecho textual...")
         
         #Botão para processar a entrada            
-        if st.button("Analisar"):
+        if st.button("Classificar"):
             if user_input.strip():  # Verifica se há texto
-                with st.spinner("Analisando sua questão..."):
+                with st.spinner("Claficando trecho fornecido..."):
                     try:
                         # Chama o método do controller para processar a entrada
                         resposta = self.controller.run(user_input)
